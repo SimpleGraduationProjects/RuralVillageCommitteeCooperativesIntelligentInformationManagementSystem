@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.CunminDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.entity.CunminEntity" id="cunminMap">
+        <result property="cunminzhanghao" column="cunminzhanghao"/>
+        <result property="mima" column="mima"/>
+        <result property="cunminxingming" column="cunminxingming"/>
+        <result property="xingbie" column="xingbie"/>
+        <result property="nianling" column="nianling"/>
+        <result property="juzhudizhi" column="juzhudizhi"/>
+        <result property="minzu" column="minzu"/>
+        <result property="xueli" column="xueli"/>
+        <result property="lianxifangshi" column="lianxifangshi"/>
+        <result property="zhaopian" column="zhaopian"/>
+        <result property="jiatingqingkuang" column="jiatingqingkuang"/>
+    </resultMap>
+
+	<select id="selectListVO"
+		resultType="com.entity.vo.CunminVO" >
+		SELECT * FROM cunmin  cunmin         
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectVO"
+		resultType="com.entity.vo.CunminVO" >
+		SELECT  cunmin.* FROM cunmin  cunmin
+ 		<where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+
+    <select id="selectListView"
+		resultType="com.entity.view.CunminView" >
+
+		SELECT  cunmin.* FROM cunmin  cunmin 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.entity.view.CunminView" >
+		SELECT * FROM cunmin  cunmin <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	
+</mapper>
