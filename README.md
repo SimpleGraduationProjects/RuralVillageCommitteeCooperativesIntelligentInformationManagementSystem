@@ -1,0 +1,2 @@
+# RuralVillageCommitteeCooperativesIntelligentInformationManagementSystem
+农村村委合作社智能信息化管理系统
